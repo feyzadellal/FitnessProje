@@ -1,6 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using FitnessApp.Data; // DbContext dosyasýný tanýmasý için
+
 var builder = WebApplication.CreateBuilder(args);
 
-// --- BURASI EKSÄ°KTÄ°, ÅžÄ°MDÄ° EKLÄ°YORUZ ---
+
+// 1. Veritabaný Baðlantýsýný (Köprüyü) Ekliyoruz
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
+// ---------------------------------------
+
+// 2. MVC Sistemini Ekliyoruz
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
