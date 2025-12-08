@@ -1,0 +1,49 @@
+﻿@model IEnumerable<FitnessApp.Models.Egitmen>
+
+@{
+    ViewData["Title"] = "Eğitmenler";
+}
+
+<div class="container mt-5">
+    <h2>Eğitmen Kadrosu</h2>
+    
+    <p>
+        <a href="#" class="btn btn-success">Yeni Eğitmen Ekle</a>
+    </p>
+
+    <table class="table table-hover table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Fotoğraf</th>
+                <th>Ad Soyad</th>
+                <th>Uzmanlık Alanı</th>
+                <th>Çalıştığı Salon</th> <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @if(string.IsNullOrEmpty(item.FotoUrl))
+                        {
+                            <span>📷 Yok</span>
+                        }
+                        else
+                        {
+                            <img src="@item.FotoUrl" width="50" class="rounded-circle" />
+                        }
+                    </td>
+                    <td>@item.AdSoyad</td>
+                    <td>@item.UzmanlikAlani</td>
+                    <td>
+                        <span class="badge bg-info text-dark">@item.Salon.Ad</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-sm btn-warning">Düzenle</button>
+                        <button class="btn btn-sm btn-danger">Sil</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
