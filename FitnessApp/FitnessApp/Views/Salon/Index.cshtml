@@ -1,0 +1,27 @@
+﻿@model IEnumerable<FitnessApp.Models.Salon>
+
+@{
+    ViewData["Title"] = "Spor Salonları";
+}
+
+<div class="container mt-5">
+    <h2>Spor Salonu Listesi</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Salon Adı</th>
+                <th>Şehir</th>
+                <th>Çalışma Saatleri</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>@item.Ad</td>
+                    <td>@item.Sehir</td>
+                    <td>@item.CalismaSaatleri</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

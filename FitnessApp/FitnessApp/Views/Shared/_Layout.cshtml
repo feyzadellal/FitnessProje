@@ -19,12 +19,30 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Salon" asp-action="Index">Spor Salonları</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Egitmen" asp-action="Index">Eğitmenler</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Hizmet" asp-action="Index">Hizmetler</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Randevu" asp-action="Index">Randevular</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" style="font-weight: bold; color: #0d6efd !important;" asp-area="" asp-controller="Oneri" asp-action="Index">🤖 AI Antrenör</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -38,7 +56,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - FitnessApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - FitnessApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Mahremiyet</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
