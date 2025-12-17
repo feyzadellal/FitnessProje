@@ -14,6 +14,7 @@ namespace FitnessApp.Data
         public DbSet<Hizmet> Hizmetler { get; set; }
         public DbSet<Randevu> Randevular { get; set; }
 
+
         // --- İŞTE O HATAYI ÇÖZEN SİHİRLİ KOD BURADA ---
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

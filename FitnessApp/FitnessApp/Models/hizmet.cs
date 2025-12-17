@@ -1,10 +1,14 @@
-﻿namespace FitnessApp.Models
+﻿using System.ComponentModel.DataAnnotations.Schema; // 1. Bunu ekledik (Gerekli kütüphane)
+
+namespace FitnessApp.Models
 {
     public class Hizmet
     {
         public int Id { get; set; }
         public string? Ad { get; set; }
         public int SureDk { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")] // 2. Hatayı çözen satır burası!
         public decimal Ucret { get; set; }
 
         // İlişki: Hangi Salon?
